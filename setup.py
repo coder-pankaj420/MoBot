@@ -1,4 +1,6 @@
 from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'mobot'
 
@@ -10,6 +12,11 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', 'mobot', 'launch'), glob('launch/*.launch.py')),
+
+        (os.path.join('share', 'mobot', 'urdf'), glob('urdf/*')),
+        (os.path.join('share', 'mobot', 'description'), glob('description/*')),
+
     ],
     install_requires=['setuptools'],
     zip_safe=True,
