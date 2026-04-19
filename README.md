@@ -8,8 +8,6 @@ MoBot is a differential-drive mobile robot built from scratch in ROS 2, capable 
 ## 📁 Repository Structure
 
 ```
-mobot_ws/
-└── src/
     └── mobot/                  # Main ROS 2 Python-type package
         ├── description/        # URDF & Xacro files
         │   ├── robot.urdf.xacro         # Top-level robot description
