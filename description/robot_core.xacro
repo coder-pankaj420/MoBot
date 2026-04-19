@@ -34,7 +34,7 @@
             <geometry>
                 <box size="0.5 0.5 0.2"/>
             </geometry>
-            <material name="orange"/>
+            <material name="red"/>
         </visual>
 
         <collision>
@@ -84,7 +84,7 @@
             <geometry>
                 <cylinder radius="0.08" length="0.05"/>
             </geometry>
-            <material name="black"/>
+            <material name="blue"/>
         </visual>
 
         <collision>
@@ -119,7 +119,7 @@
     <joint name="right_wheel_joint" type="continuous">
         <parent link="base_link"/>
         <child link="right_wheel"/>
-        <origin xyz="0 -0.275 0" rpy="1.5708 0 0"/>
+        <origin xyz="0 -0.275 0" rpy="-1.5708 0 0"/>
         <axis xyz="0 0 1"/>
     </joint>
 
@@ -129,7 +129,7 @@
             <geometry>
                 <cylinder radius="0.08" length="0.05"/>
             </geometry>
-            <material name="black"/>
+            <material name="blue"/>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -171,7 +171,7 @@
             <geometry>
                 <sphere radius="0.08"/>
             </geometry>
-            <material name="red"/>
+            <material name="black"/>
         </visual>
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -197,7 +197,7 @@
     
     <gazebo reference="caster_wheel">
         <material>Gazebo/Black</material>
-        <mu1 value="0.001"/>
-        <mu2 value="0.001"/>
+        <mu1 value="0.1"/>
+        <mu2 value="0.1"/>
     </gazebo>
 </robot>

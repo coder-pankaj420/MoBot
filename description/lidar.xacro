@@ -35,8 +35,8 @@
 <gazebo reference="lidar_link">
         <sensor name="lidar" type="ray">
             <pose>0 0 0 0 0 0</pose>
-            <always_on>false</always_on>
-            <visualize>false</visualize>
+            <always_on>true</always_on>
+            <visualize>true</visualize>
             <update_rate>10</update_rate>
 
             <ray>
@@ -59,6 +59,7 @@
                 <ros>
                     <remapping>~/out:=scan</remapping>
                 </ros>
+
                 <output_type>sensor_msgs/LaserScan</output_type>
                 <frame_name>lidar_link</frame_name>
             </plugin>
